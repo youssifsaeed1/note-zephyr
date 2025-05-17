@@ -3,14 +3,10 @@ manifest:
     - name: zephyr
       revision: main
       url: https://github.com/zephyrproject-rtos/zephyr
-    - name: cmsis
-      url: https://github.com/zephyrproject-rtos/cmsis
-      revision: master
-      path: modules/hal/cmsis
-    - name: hal_stm32
-      url: https://github.com/zephyrproject-rtos/hal_stm32
-      revision: main
-      path: modules/hal/stm32
+      import:
+        name-allowlist:
+          - cmsis
+          - hal_stm32
     - name: note-c
       revision: master
       url: https://github.com/blues/note-c
